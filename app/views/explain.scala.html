@@ -6,11 +6,45 @@
 </head>
 <body bgcolor="gray">
     <div style="text-align: center">
-        <p>Welcome to Shutthebox!</p>
+        <h1>Welcome to Shutthebox!</h1>
+        <p>Shut the Box is also known as Canoga. Being a traditional pub game without any national governing body, variations of equipment and rules abound. Where there is doubt, locally played rules should always apply.<br\> 
+            Shut the Box can be played by any number of players although it is most enjoyable with two, three or four. Some people even play the game solo as a pastime akin to patience. As played traditionally in English pubs, Shut the Box is a gambling pastime with each of the players paying an agreed amount into the "pool" at the beginning and the winner collecting the pool at the end of each round. However, it isn't necessary to gamble in order to play the game.</p>
         <p>How to play:</p>
-        <p>write Localhost9000/gameX, where X is the move you want to do.</p>
-        <p>example: .../gamew to roll the dice</p>
+        <center>
+            <table>
+                <tr>
+                    <th>Route</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>localhost:9000/game/X</td>
+                    <td>where X is the move you want to do</td>
+                </tr>
+                <tr>
+                    <td>localhost:9000/game/w</td>
+                    <td>to roll the dice</td>
+                </tr>
+                <tr>
+                    <td>localhost:9000/game/next</td>
+                    <td>to skip to next player turn</td>
+                </tr>
+                <tr>
+                    <td>localhost:9000/game/z</td>
+                    <td>to redo a move</td>
+                </tr>
+                <tr>
+                    <td>localhost:9000/game/y</td>
+                    <td>to undo a move</td>
+                </tr>
+                <tr>
+                    <td>localhost:9000/game/q</td>
+                    <td>to quit the game</td>
+                </tr>
+            </table>
+        </center>
+        <br>
         <img src="@routes.Assets.versioned("images/shutthebox.png")">
+        <p>Have fun!</p>  
         </p>
     </div>
 </body>
