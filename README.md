@@ -34,5 +34,5 @@ A simplified version of the Board Game Shut the Box!
 
 
 # Authors
-* Jannis Liebscher
 * Tobias Latt
+* Dennis Agostinho da Silva
