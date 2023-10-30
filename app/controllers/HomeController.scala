@@ -25,24 +25,39 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
    */
 
   var cont = Controller.apply()
-  val tui = new Tui(cont)
-
-
-  def index() = Action{ implicit request: Request[AnyContent] =>
-    Ok(views.html.index())
-
+  var tui = new Tui(cont)
+  var isShut: List[Boolean] = List(false, false, false, false, false, false, false, false, false)
+  def update() = {
+    for ( x <- 1 to 9){
+      isShut = isShut.updated(x - 1, cont.isShut(x))
+    }
   }
+  var style = "felt"
 
+  def start() = Action{ implicit request: Request[AnyContent] =>
+    Ok(views.html.start(style=style))
+  }
   def explain() = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.explain())
+    Ok(views.html.explain(style=style))
   }
-
-  def startGame() = Action{ implicit request: Request[AnyContent] => 
-    Ok(s"Welcome to Shutthebox!\n \nHow to play:\nwrite Localhost9000/gameX, where X is the move you want to do.\nexample: .../gamew to roll the dice\n\n$cont")
+  def newGame() = Action{ implicit request: Request[AnyContent] =>
+    cont = Controller.apply()
+    tui = new Tui(cont)
+    update()
+    Ok(views.html.game(style=style, player = cont.getPlayers, dice = cont.getDice, sum = cont.getSum, board = isShut))
+  }
+  def startGame() = Action{ implicit request: Request[AnyContent] =>
+    update()
+    Ok(views.html.game(style=style, player = cont.getPlayers, dice = cont.getDice, sum = cont.getSum, board = isShut))
   }
   def doAMove(input:String) = Action{ implicit request: Request[AnyContent] =>
     tui.getInputAndPrintLoop(input)
-    Ok(cont.toString())
+    update()
+    Ok(views.html.game(style=style, player = cont.getPlayers, dice = cont.getDice, sum = cont.getSum, board = isShut))
   }
 
+  def changeStyle(s:String) = Action{ implicit request: Request[AnyContent] =>
+    style = s
+    Ok(views.html.start(style=style))
+  }
 }
