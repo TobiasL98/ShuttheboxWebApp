@@ -1,0 +1,55 @@
+@(style: String, player: String, dice: String, sum: Int, board: List[Boolean])
+@main("Game", s"$style"){
+<div class="game" style="text-align: center">
+
+  <div class="game_display">
+  
+    <div class="player">
+      <p>@player</p>
+    </div>
+    <div class="clap">
+      @for(index <- 0 until board.size){
+      @if(board(index)){
+      <a href="http://localhost:9000/game/@{index + 1}" class="stone-shut"> # </a>
+      }
+      @if(!board(index)){
+      <a href="http://localhost:9000/game/@{index + 1}" class="stone-not-shut"> @{index + 1} </a>
+      }
+      }
+      <p class="dclap">
+        @for(index <- 0 until board.size){
+        @if(board(index)){
+        @{index + 1}
+        }
+        @if(!board(index)){
+        #
+        }
+        }
+      </p>
+    </div>
+    <div class="dice">
+      <p>Gewürfelt: @dice | Summe: @sum</p>
+    </div>
+  </div>
+
+  <div class="game_buttons">
+
+
+  <div class="button_dice">
+      <a href="http://localhost:9000/game/w">Würfeln </a>
+  </div>
+  <div class="button_undo">
+      <a href="http://localhost:9000/game/y">Undo </a>
+  </div>
+  <div class="button_redo">
+      <a href="http://localhost:9000/game/z">Redo </a>
+  </div>
+  <div class="button_nextPlayer">
+      <a href="http://localhost:9000/game/next">next Player</a>
+  </div>
+</div>
+<!--  </p>-->
+<!--</center>-->
+<!--  <img src="@routes.Assets.versioned("images/shutthebox.png")" width="auto" height="300>-->
+</div>
+}
