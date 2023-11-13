@@ -1,0 +1,459 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_BackstopJS_Homepage_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_BackstopJS_Homepage_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_BackstopJS_Homepage_0_document_0_phone.png",
+        "label": "BackstopJS Homepage",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://garris.github.io/BackstopJS/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_BackstopJS_Homepage_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_BackstopJS_Homepage_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_BackstopJS_Homepage_0_document_1_tablet.png",
+        "label": "BackstopJS Homepage",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://garris.github.io/BackstopJS/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_BackstopJS_Homepage_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_BackstopJS_Homepage_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_BackstopJS_Homepage_0_document_2_desktop.png",
+        "label": "BackstopJS Homepage",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://garris.github.io/BackstopJS/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S1_landing_page_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S1_landing_page_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_S1_landing_page_0_document_0_phone.png",
+        "label": "S1_landing_page",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S1_landing_page_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S1_landing_page_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_S1_landing_page_0_document_1_tablet.png",
+        "label": "S1_landing_page",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S1_landing_page_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S1_landing_page_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_S1_landing_page_0_document_2_desktop.png",
+        "label": "S1_landing_page",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S1_landing_page_dropdown_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_S1_landing_page_dropdown_0_document_0_phone.png",
+        "label": "S1_landing_page_dropdown",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S1_landing_page_dropdown_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_S1_landing_page_dropdown_0_document_1_tablet.png",
+        "label": "S1_landing_page_dropdown",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S1_landing_page_dropdown_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_S1_landing_page_dropdown_0_document_2_desktop.png",
+        "label": "S1_landing_page_dropdown",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_Start_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S3_Game_Start_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_S3_Game_Start_0_document_0_phone.png",
+        "label": "S3_Game_Start",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/new",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.02168553688823959,
+          "misMatchPercentage": "0.02",
+          "analysisTime": 34
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_Start_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S3_Game_Start_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_S3_Game_Start_0_document_1_tablet.png",
+        "label": "S3_Game_Start",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/new",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.00980731510326526,
+          "misMatchPercentage": "0.01",
+          "analysisTime": 43
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_Start_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S3_Game_Start_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_S3_Game_Start_0_document_2_desktop.png",
+        "label": "S3_Game_Start",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/new",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.007254464285714286,
+          "misMatchPercentage": "0.01",
+          "analysisTime": 52
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_wuerfeln_shut_one_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S3_Game_wuerfeln_shut_one_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_S3_Game_wuerfeln_shut_one_0_document_0_phone.png",
+        "label": "S3_Game_wuerfeln_shut_one",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/w",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.9135317750182614,
+          "misMatchPercentage": "0.91",
+          "analysisTime": 35
+        },
+        "diffImage": "..\\bitmaps_test\\20221119-175417\\failed_diff_backstop_default_S3_Game_wuerfeln_shut_one_0_document_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_wuerfeln_shut_one_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S3_Game_wuerfeln_shut_one_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_S3_Game_wuerfeln_shut_one_0_document_1_tablet.png",
+        "label": "S3_Game_wuerfeln_shut_one",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/w",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.24345217491634935,
+          "misMatchPercentage": "0.24",
+          "analysisTime": 44
+        },
+        "diffImage": "..\\bitmaps_test\\20221119-175417\\failed_diff_backstop_default_S3_Game_wuerfeln_shut_one_0_document_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_wuerfeln_shut_one_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S3_Game_wuerfeln_shut_one_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_S3_Game_wuerfeln_shut_one_0_document_2_desktop.png",
+        "label": "S3_Game_wuerfeln_shut_one",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/w",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.36863839285714284,
+          "misMatchPercentage": "0.37",
+          "analysisTime": 55
+        },
+        "diffImage": "..\\bitmaps_test\\20221119-175417\\failed_diff_backstop_default_S3_Game_wuerfeln_shut_one_0_document_2_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_next_player_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S3_Game_next_player_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_S3_Game_next_player_0_document_0_phone.png",
+        "label": "S3_Game_next_player",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/next",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.028077063550036523,
+          "misMatchPercentage": "0.03",
+          "analysisTime": 31
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_next_player_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S3_Game_next_player_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_S3_Game_next_player_0_document_1_tablet.png",
+        "label": "S3_Game_next_player",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/next",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.00778816199376947,
+          "misMatchPercentage": "0.01",
+          "analysisTime": 41
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_next_player_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20221119-175417\\backstop_default_S3_Game_next_player_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_S3_Game_next_player_0_document_2_desktop.png",
+        "label": "S3_Game_next_player",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/next",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.015848214285714285,
+          "misMatchPercentage": "0.02",
+          "analysisTime": 51
+        }
+      },
+      "status": "pass"
+    }
+  ],
+  "id": "backstop_default"
+}

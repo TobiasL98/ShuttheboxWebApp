@@ -1,0 +1,60 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_wuerfeln_shut_one_0__0_phone.png",
+        "test": "..\\bitmaps_test\\20221119-180132\\backstop_default_S3_Game_wuerfeln_shut_one_0__0_phone.png",
+        "selector": "",
+        "fileName": "backstop_default_S3_Game_wuerfeln_shut_one_0__0_phone.png",
+        "label": "S3_Game_wuerfeln_shut_one",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/w",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "engineErrorMsg": "waiting for selector `.not-shut-1` failed: timeout 30000ms exceeded",
+        "error": "Reference file not found C:\\Users\\Jannis\\IdeaProjects\\webtech_shutterbox\\test\\vrt\\backstop_data\\bitmaps_reference\\backstop_default_S3_Game_wuerfeln_shut_one_0__0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_wuerfeln_shut_one_0__1_tablet.png",
+        "test": "..\\bitmaps_test\\20221119-180132\\backstop_default_S3_Game_wuerfeln_shut_one_0__1_tablet.png",
+        "selector": "",
+        "fileName": "backstop_default_S3_Game_wuerfeln_shut_one_0__1_tablet.png",
+        "label": "S3_Game_wuerfeln_shut_one",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/w",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "engineErrorMsg": "waiting for selector `.not-shut-1` failed: timeout 30000ms exceeded",
+        "error": "Reference file not found C:\\Users\\Jannis\\IdeaProjects\\webtech_shutterbox\\test\\vrt\\backstop_data\\bitmaps_reference\\backstop_default_S3_Game_wuerfeln_shut_one_0__1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S3_Game_wuerfeln_shut_one_0__2_desktop.png",
+        "test": "..\\bitmaps_test\\20221119-180132\\backstop_default_S3_Game_wuerfeln_shut_one_0__2_desktop.png",
+        "selector": "",
+        "fileName": "backstop_default_S3_Game_wuerfeln_shut_one_0__2_desktop.png",
+        "label": "S3_Game_wuerfeln_shut_one",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/game/w",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "engineErrorMsg": "waiting for selector `.not-shut-1` failed: timeout 30000ms exceeded",
+        "error": "Reference file not found C:\\Users\\Jannis\\IdeaProjects\\webtech_shutterbox\\test\\vrt\\backstop_data\\bitmaps_reference\\backstop_default_S3_Game_wuerfeln_shut_one_0__2_desktop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}

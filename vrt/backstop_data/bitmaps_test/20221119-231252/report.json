@@ -1,0 +1,23 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0_document_0_desktop.png",
+        "test": "..\\bitmaps_test\\20221119-231252\\backstop_default_S1_landing_page_dropdown_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_S1_landing_page_dropdown_0_document_0_desktop.png",
+        "label": "S1_landing_page_dropdown",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "error": "Reference file not found C:\\Users\\Jannis\\IdeaProjects\\webtech_shutterbox\\test\\vrt\\backstop_data\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}
