@@ -1,0 +1,60 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0__0_phone.png",
+        "test": "..\\bitmaps_test\\20221119-223941\\backstop_default_S1_landing_page_dropdown_0__0_phone.png",
+        "selector": "",
+        "fileName": "backstop_default_S1_landing_page_dropdown_0__0_phone.png",
+        "label": "S1_landing_page_dropdown",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "engineErrorMsg": "waiting for selector `.show` failed: timeout 30000ms exceeded",
+        "error": "Reference file not found C:\\Users\\Jannis\\IdeaProjects\\webtech_shutterbox\\test\\vrt\\backstop_data\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0__0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0__1_tablet.png",
+        "test": "..\\bitmaps_test\\20221119-223941\\backstop_default_S1_landing_page_dropdown_0__1_tablet.png",
+        "selector": "",
+        "fileName": "backstop_default_S1_landing_page_dropdown_0__1_tablet.png",
+        "label": "S1_landing_page_dropdown",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "engineErrorMsg": "waiting for selector `.show` failed: timeout 30000ms exceeded",
+        "error": "Reference file not found C:\\Users\\Jannis\\IdeaProjects\\webtech_shutterbox\\test\\vrt\\backstop_data\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0__1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0__2_desktop.png",
+        "test": "..\\bitmaps_test\\20221119-223941\\backstop_default_S1_landing_page_dropdown_0__2_desktop.png",
+        "selector": "",
+        "fileName": "backstop_default_S1_landing_page_dropdown_0__2_desktop.png",
+        "label": "S1_landing_page_dropdown",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:9000/",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "engineErrorMsg": "waiting for selector `.show` failed: timeout 30000ms exceeded",
+        "error": "Reference file not found C:\\Users\\Jannis\\IdeaProjects\\webtech_shutterbox\\test\\vrt\\backstop_data\\bitmaps_reference\\backstop_default_S1_landing_page_dropdown_0__2_desktop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}
