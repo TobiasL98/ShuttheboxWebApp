@@ -1,0 +1,36 @@
+@(style: String, player: String, dice: String, sum: Int, board: List[Boolean])
+@main("Game", s"$style"){
+<body onload="loadGame()">
+<div class="game row" style="text-align: center ">
+
+  <div class="game_display col-12">
+  
+    <div class="player row">@player</div>
+    <div class="clap row">
+      @for(index <- 0 until board.size){
+        @if(board(index)){
+          <a class="shut-@{index + 1} stone-shut col-4 col-sm"> # </a>
+        }
+        @if(!board(index)){
+          <a onclick="closeClap(@index + 1)" class="not-shut-@{index + 1} stone-not-shut col-4 col-sm"> @{index + 1} </a>
+        }
+      }
+    </div>
+    <div class="dice row" id="dice-output">Gewürfelt: @dice | Summe: @sum</div>
+  </div>
+
+  <div class="game_buttons col-12">
+    <div class="row">
+      <div class="decoration d-xs-none col-sm-1"></div>
+      <a class="button_dice col-12 col-sm-2" id="dice" onclick="throwDice()">throw the dice </a>
+      <a class="button_undo col-12 col-sm-2" id="undo" onclick="undo()">Undo </a>
+      <a class="button_redo col-12 col-sm-2" id="redo" onclick="redo()">Redo </a>
+      <a class="button_nextPlayer col-12 col-sm-2" onclick="nextPlayer()">next Player</a>
+      <a class="button_newGame col-12 col-sm-2" onclick="newGame()"> Neues Spiel starten </a>
+      <div class="decoration d-xs-none col-sm-1"></div>
+    </div>
+  </div>
+</div>
+</body>
+
+}
