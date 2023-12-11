@@ -30,7 +30,8 @@ class FileIOXML extends FileIOInterface {
     return new Game(board, Dice("two"), players, sum)
   }
 
-  def save(game: GameInterface) = {
+  override def getRaw(game: GameInterface): String = gameToXML(game).toString()
+  override def save(game: GameInterface) = {
     import java.io._
     val pw = new PrintWriter(new File("game.xml"))
     val prettyPrinter = new PrettyPrinter(120, 4)

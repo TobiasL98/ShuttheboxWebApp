@@ -21,9 +21,9 @@ project/project/
 project/target/
 project/metals.sbt
 
-public/
 
 .bsp/
 .metals/
 .vscode/
 target/
+/vrt/backstop_data/bitmaps_test/

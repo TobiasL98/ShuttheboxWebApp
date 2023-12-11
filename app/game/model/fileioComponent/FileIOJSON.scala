@@ -36,6 +36,8 @@ class FileIOJSON extends FileIOInterface {
     return new Game(board, Dice("two"), players, sum)
   }
 
+  def getRaw(game: GameInterface):String = gameToJson(game).toString()
+
   override def save(game: GameInterface) = {
     import java.io._
     val pw = new PrintWriter(new File("game.json"))
@@ -47,7 +49,8 @@ class FileIOJSON extends FileIOInterface {
       "game" -> Json.obj(
         "board" -> Json.toJson(boardToJson(game)),
         "players" -> Json.toJson(playersToJson(game)),
-        "sum" -> JsNumber(game.getSum)
+        "sum" -> JsNumber(game.getSum),
+        "wurf" -> Json.toJson(game.getDice)
       )
     )
   }

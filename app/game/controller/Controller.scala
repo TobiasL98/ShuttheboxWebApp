@@ -21,6 +21,8 @@ case class Controller(
   def save: Unit = file.save(game)
   def load: GameInterface = file.load
 
+  def getRaw: String = file.getRaw(game)
+
   def doAndPublish(doThis: => GameInterface) = {
     game = doThis
     notifyObservers
@@ -44,8 +46,6 @@ case class Controller(
   def endMove: GameInterface = undoManager.doStep(game, new EndMoveCommand())
   def undo: GameInterface = undoManager.undoStep(game)
   def redo: GameInterface = undoManager.redoStep(game)
-    
-
 }
 
 object Controller {
