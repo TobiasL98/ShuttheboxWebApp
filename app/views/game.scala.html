@@ -9,7 +9,7 @@
     <div class="clap row">
       <template v-for="clap in claps">
         <a v-if="clap.isClosed" class="clap_button col-4 col-sm" > # </a>
-        <a v-else v-on:click="closeClap(clap.number)" class="clap_button col-4 col-sm"> {{ clap.number }} {{clap.isClosed}}</a>
+        <a v-else v-on:click="closeClap(clap.number)" class="clap_button col-4 col-sm"> {{ clap.number }} </a>
       </template>
     </div>
     <div class="dice row" id="dice-output">Gewürfelt: {{dice}} | Summe: {{diceSum}}</div>
