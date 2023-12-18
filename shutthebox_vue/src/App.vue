@@ -7,7 +7,7 @@
           <div class="col-4">
               <a href="https://de.wikipedia.org/wiki/Shut_the_Box"> ShutTheBox Wiki </a>
           </div>
-          <div class="col-8">Authors: Sahrah Tiefert, Jannis Liebscher</div>
+          <div class="col-8">Authors: Tobias Latt, Dennis Agostinho da Silva</div>
       </div>
   </div>
 </div>
