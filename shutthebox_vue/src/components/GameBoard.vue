@@ -11,7 +11,7 @@ export default{
             diceSum: 0,
             score1: 0,
             score2: 0,
-            currPlayer: 1,
+            currPlayer: 2,
             claps: [
                 {number: id++, isClosed: false},
                 {number: id++, isClosed: false},
@@ -85,7 +85,8 @@ export default{
             this.sendAjaxReq("w")
             this.numOfMoves++
             console.log("threw dice")
-            /*
+        },
+        /*
         throwDice(){
             // this.sendAjaxReq("w")
             console.log("threw dice")
@@ -97,8 +98,8 @@ export default{
                 console.log("Updating Dice:");
                 game.updateDice(data);
             })
-        },*/
         },
+        */
         undo() {
             this.numOfMoves -= 1;
             console.log("undo")
@@ -134,7 +135,12 @@ export default{
                 this.currPlayer = data.game.players.turn;
                 this.diceSum = data.game.sum;
                 this.dice = data.game.wurf; 
+                console.log("DEBUG 1");
                 console.log(data);
+                console.log("DEBUG 2");
+                console.log(this.dice);
+                console.log(this.diceSum);
+                console.log("DEBUG 3");
             })
         },
     },

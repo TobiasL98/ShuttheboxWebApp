@@ -4,6 +4,9 @@
         props: {
             dice: String,
             diceSum: String,
+        },
+        watch: {
+            dice()
         }
     }
 </script>
