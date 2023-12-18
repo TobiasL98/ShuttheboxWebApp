@@ -14,7 +14,7 @@ export default{
         <div class="row">
             <WoodButtons txt="Home" link="/" />
             <WoodButtons txt="About" link="/about" />
-            <WoodButtons txt="play Game" link="/game" />
+            <WoodButtons txt="Play Game" link="/game" />
         </div>
     </div>
 </template>

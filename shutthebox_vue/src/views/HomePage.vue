@@ -21,7 +21,7 @@
             Die Minuspunkte werden dabei laufend addiert, sodass die einzelnen Spieler nacheinander ausscheiden und der letzte Überlebende gewinnt.
         </p>
         <p class="col-12">
-            <a href="https://de.wikipedia.org/wiki/Shut_the_Box">Quelle: wikipedia</a>
+            <a href="https://de.wikipedia.org/wiki/Shut_the_Box">Quelle: Wikipedia</a>
         </p>
     </div>
 </template>
