@@ -61,7 +61,7 @@ export default{
             console.log("updateing Data with: " + jsonData)
             this.score1 = jsonData.game.players.score1;
             this.score2 = jsonData.game.players.score2;
-            this.updateDice;
+            this.updateDice(jsonData);
             for(let idx = 0; idx < 9; idx++){
                         this.claps[idx].isClosed = jsonData.game.board[idx];
                     }
@@ -80,6 +80,12 @@ export default{
             this.sendAjaxReq(clapId)
             this.claps[clapId - 1].isClosed = true;
             console.log("closed clap " + clapId)
+        },
+        updateMyDice(newValue) {
+            this.dice = newValue;
+        },
+        updateMyDiceSum(newValue) {
+            this.diceSum = newValue;
         },
         throwDice() {
             this.sendAjaxReq("w")
@@ -128,19 +134,13 @@ export default{
         sendAjaxReq(operation){
             console.log("starting ajax")
             
-            $.get("http://localhost:9000/api/raw/"+operation, function(data){
+            $.get("http://localhost:9000/api/raw/" + operation, (data) => {
                 data = $.parseJSON(data);
                 this.score1 = data.game.players.score1;
                 this.score2 =  data.game.players.score2;
                 this.currPlayer = data.game.players.turn;
                 this.diceSum = data.game.sum;
                 this.dice = data.game.wurf; 
-                console.log("DEBUG 1");
-                console.log(data);
-                console.log("DEBUG 2");
-                console.log(this.dice);
-                console.log(this.diceSum);
-                console.log("DEBUG 3");
             })
         },
     },
@@ -157,17 +157,17 @@ export default{
         <div class="textDisplay"> Player1: {{this.score1}} | Player2: {{ this.score2 }} | Player {{this.currPlayer }}`s turn</div>
         <div class="gameDisplay" >
             <div class="clapsRow" v-for="clap in claps" :key="clap.number">
-            <a v-if="clap.isClosed" class="clap col-4 col-sm" > # </a>
-            <a v-else v-on:click="closeClap(clap.number)" class="clap col-4 col-sm"> {{ clap.number }}</a>
+                <a v-if="clap.isClosed" class="clap col-4 col-sm" > # </a>
+                <a v-else v-on:click="closeClap(clap.number)" class="clap col-4 col-sm"> {{ clap.number }}</a>
             </div>
             <div class="textDisplay"> Gewürfelt: {{ this.dice }} | Summe: {{ this.diceSum }}</div>
         </div>
         <div class="gameButtons">
-            <a class="woodButton col-12 col-sm-2" v-on:click="throwDice()"> throwDice </a>
-            <a class="woodButton col-12 col-sm-2" v-on:click="undo()"> undo </a>
-            <a class="woodButton col-12 col-sm-2" v-on:click="redo()"> redo </a>
-            <a class="woodButton col-12 col-sm-2" v-on:click="nextPlayer()"> next Player </a>
-            <a class="woodButton col-12 col-sm-2" v-on:click="newGame()"> new Game </a>
+            <a class="woodButton col-12 col-sm-2" v-on:click="throwDice()"> Throw Dice </a>
+            <a class="woodButton col-11 col-sm-2" v-on:click="undo()"> Undo </a>
+            <a class="woodButton col-12 col-sm-2" v-on:click="redo()"> Redo </a>
+            <a class="woodButton col-12 col-sm-2" v-on:click="nextPlayer()"> Next Player </a>
+            <a class="woodButton col-12 col-sm-2" v-on:click="newGame()"> New Game </a>
         </div>
     </div>
 </template>

@@ -5,15 +5,12 @@
             dice: String,
             diceSum: String,
         },
-        watch: {
-            dice()
-        }
     }
 </script>
 
 <template>
     <div class="diceRow" id="dice-output">
-        Gewürfelt: {{dice}} | Summe: {{diceSum}}
+        Gewürfelt: {{ dice }} | Summe: {{ diceSum }}
     </div>
 </template>
 
