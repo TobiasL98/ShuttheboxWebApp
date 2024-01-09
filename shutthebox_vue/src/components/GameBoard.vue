@@ -87,12 +87,6 @@ export default{
             this.claps[clapId - 1].isClosed = true;
             console.log("closed clap " + clapId)
         },
-        updateMyDice(newValue) {
-            this.dice = newValue;
-        },
-        updateMyDiceSum(newValue) {
-            this.diceSum = newValue;
-        },
         throwDice() {
             this.sendAjaxReq("w")
             this.numOfMoves++
@@ -111,6 +105,10 @@ export default{
         nextPlayer() {
             this.sendAjaxReq("next")
             this.numOfMoves +=1;
+            for(let i = 0; i < 9; i++){
+                this.claps[i].isClosed = false;
+                console.log("opening clap " + (i+1));
+            }
             console.log("changed player")            
         },
         newGame() {
