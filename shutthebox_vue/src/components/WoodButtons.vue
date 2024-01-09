@@ -3,14 +3,13 @@
         name: "WoodButton",
         props: {
             txt: String,
-            link: String,
         },
 
     }
 </script>
 
 <template>
-    <div class="woodButton col-xs-12 col-sm col-md-12"><router-link :to="this.link"> {{ txt }}</router-link></div>
+    <div class="woodButton col-xs-12 col-sm col-md-12"> {{ txt }}</div>
 </template>
 
 <style>

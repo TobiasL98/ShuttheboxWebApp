@@ -2,14 +2,16 @@
 export default{
     name: 'WoodDisplay',
     props: {
-        txt: String
+        score1: String,
+        score2: String,
+        playerTurn: String
     }
 }
     
 </script>
 
 <template>
-    <div class="textDisplay"> {{ txt }}</div>
+    <div class="textDisplay"> Player1: {{this.score1}} | Player2: {{ this.score2 }} | Player {{this.playerTurn }}`s turn</div>
 </template>
 
 <style>
@@ -26,7 +28,7 @@ export default{
     background-image:url("/src/assets/retina_wood.png");
     background-repeat: repeat;
     height: auto;
-    width: 90%;
+    width: 20%;
     vertical-align: middle;
 }
 
