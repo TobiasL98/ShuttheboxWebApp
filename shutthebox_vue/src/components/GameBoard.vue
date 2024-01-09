@@ -156,11 +156,11 @@ export default{
         </div>
         <DiceDisplay :dice="this.dice" :diceSum="this.diceSum" />
         <div>
-            <WoodButtons :txt="'Throw Dice'" v-on:click="throwDice()"/>
-            <WoodButtons :txt="'Undo'" v-on:click="undo()"/>
-            <WoodButtons :txt="'Redo'" v-on:click="redo()"/>
-            <WoodButtons :txt="'Next Player'" v-on:click="nextPlayer()"/>
-            <WoodButtons :txt="'New Game'" v-on:click="newGame()"/>
+            <WoodButtons txt="Throw Dice" v-on:click="throwDice()"/>
+            <WoodButtons txt="Undo" v-on:click="undo()"/>
+            <WoodButtons txt="Redo" v-on:click="redo()"/>
+            <WoodButtons txt="Next Player" v-on:click="nextPlayer()"/>
+            <WoodButtons txt="New Game" v-on:click="newGame()"/>
         </div>
     </div>
 </template>
