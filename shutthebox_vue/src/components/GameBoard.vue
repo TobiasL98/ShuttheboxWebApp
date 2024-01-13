@@ -1,10 +1,16 @@
 <script>
-import $ from 'jquery'
+import $ from 'jquery';
+import DiceDisplay from '@/components/DiceDisplay.vue'
+import WoodButtons from '@/components/WoodButtons.vue'
+import WoodDisplay from '@/components/WoodDisplay.vue'
 let id = 1;
 
-// let game = Vue.create
-
 export default{
+    components: {
+        DiceDisplay,
+        WoodButtons,
+        WoodDisplay,
+    },
     data(){
         return{
             dice: "noch nicht gewürfelt",
@@ -81,41 +87,28 @@ export default{
             this.claps[clapId - 1].isClosed = true;
             console.log("closed clap " + clapId)
         },
-        updateMyDice(newValue) {
-            this.dice = newValue;
-        },
-        updateMyDiceSum(newValue) {
-            this.diceSum = newValue;
-        },
         throwDice() {
             this.sendAjaxReq("w")
             this.numOfMoves++
             console.log("threw dice")
         },
-        /*
-        throwDice(){
-            // this.sendAjaxReq("w")
-            console.log("threw dice")
-            $.get("http://localhost:9000/api/raw/w", function(data){
-                console.log("send dice requ");
-                console.log(data);
-                data = $.parseJSON(data);
-                console.log(data);
-                console.log("Updating Dice:");
-                game.updateDice(data);
-            })
-        },
-        */
         undo() {
             this.numOfMoves -= 1;
+            this.sendAjaxReq("y")
             console.log("undo")
         },
         redo() {
             this.numOfMoves += 1;
+            this.sendAjaxReq("z")
             console.log("redo")
         },
         nextPlayer() {
+            this.sendAjaxReq("next")
             this.numOfMoves +=1;
+            for(let i = 0; i < 9; i++){
+                this.claps[i].isClosed = false;
+                console.log("opening clap " + (i+1));
+            }
             console.log("changed player")            
         },
         newGame() {
@@ -154,20 +147,20 @@ export default{
 
 <template>
     <div class="gameBoard" id="board">
-        <div class="textDisplay"> Player1: {{this.score1}} | Player2: {{ this.score2 }} | Player {{this.currPlayer }}`s turn</div>
+        <WoodDisplay :score1="this.score1" :score2="this.score2" :playerTurn="this.currPlayer"/>
         <div class="gameDisplay" >
             <div class="clapsRow" v-for="clap in claps" :key="clap.number">
                 <a v-if="clap.isClosed" class="clap col-4 col-sm" > # </a>
                 <a v-else v-on:click="closeClap(clap.number)" class="clap col-4 col-sm"> {{ clap.number }}</a>
             </div>
-            <div class="textDisplay"> Gewürfelt: {{ this.dice }} | Summe: {{ this.diceSum }}</div>
         </div>
-        <div class="gameButtons">
-            <a class="woodButton col-12 col-sm-2" v-on:click="throwDice()"> Throw Dice </a>
-            <a class="woodButton col-11 col-sm-2" v-on:click="undo()"> Undo </a>
-            <a class="woodButton col-12 col-sm-2" v-on:click="redo()"> Redo </a>
-            <a class="woodButton col-12 col-sm-2" v-on:click="nextPlayer()"> Next Player </a>
-            <a class="woodButton col-12 col-sm-2" v-on:click="newGame()"> New Game </a>
+        <DiceDisplay :dice="this.dice" :diceSum="this.diceSum" />
+        <div>
+            <WoodButtons txt="Throw Dice" v-on:click="throwDice()"/>
+            <WoodButtons txt="Undo" v-on:click="undo()"/>
+            <WoodButtons txt="Redo" v-on:click="redo()"/>
+            <WoodButtons txt="Next Player" v-on:click="nextPlayer()"/>
+            <WoodButtons txt="New Game" v-on:click="newGame()"/>
         </div>
     </div>
 </template>
@@ -196,21 +189,6 @@ export default{
     background-color: white;
     background-repeat: repeat;
  }
- .textDisplay{
-    display: inline-block;
-    text-align: center;
-    border-style: ridge;
-    border-width: thick;
-    border-color: #e9d3b2;
-    background-color: #e9d3b2;
-    padding: 10px;
-    margin: 2%;
-    background-image:url("/src/assets/retina_wood.png");
-    background-repeat: repeat;
-    height: auto;
-    width: 90%;
-    vertical-align: middle;
-}
 .clapsRow{
         display: inline-block;
 
@@ -231,23 +209,4 @@ export default{
     cursor: pointer;
     opacity: 0.7;
 }
-.woodButton{
-    display: inline-block;
-    text-align: center;
-    width: 100px;
-    border-style: ridge;
-    border-width: thick;
-    border-color: #e9d3b2;
-    background-color: #e9d3b2;
-    padding: 10px;
-    background-image:url("/src/assets/retina_wood.png");
-    background-color: white;
-    background-repeat: repeat;
-}
-.woodButton:hover {
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-
 </style>

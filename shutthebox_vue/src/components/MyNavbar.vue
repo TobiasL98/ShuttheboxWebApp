@@ -1,9 +1,9 @@
 <script>
-import WoodButtons from './WoodButtons.vue';
+import NavWoodButtons from './NavWoodButtons.vue';
 export default{
     name: "MyNavbar",
     components:{
-        WoodButtons
+        NavWoodButtons
     }
 
 }
@@ -12,9 +12,9 @@ export default{
 <template>
     <div class="menu col-sm-12 col-md-3">
         <div class="row">
-            <WoodButtons txt="Home" link="/" />
-            <WoodButtons txt="About" link="/about" />
-            <WoodButtons txt="Play Game" link="/game" />
+            <NavWoodButtons txt="Home" link="/" />
+            <NavWoodButtons txt="About" link="/about" />
+            <NavWoodButtons txt="Play Game" link="/game" />
         </div>
     </div>
 </template>

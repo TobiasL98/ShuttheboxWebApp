@@ -27,7 +27,7 @@
         background-image:url("/src/assets/retina_wood.png");
         background-repeat: repeat;
         height: auto;
-        width: 100%;
+        width: 30%;
         vertical-align: middle;
     }
 
