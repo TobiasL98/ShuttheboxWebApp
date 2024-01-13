@@ -1,9 +1,11 @@
 <script>
 import NavWoodButtons from './NavWoodButtons.vue';
+import SignOutButton from './SignOutButton.vue';
 export default{
     name: "MyNavbar",
     components:{
-        NavWoodButtons
+        NavWoodButtons,
+        SignOutButton
     }
 
 }
@@ -12,15 +14,20 @@ export default{
 <template>
     <div class="menu col-sm-12 col-md-3">
         <div class="row">
-            <NavWoodButtons txt="Home" link="/" />
+            <NavWoodButtons txt="Home" link="/home" />
             <NavWoodButtons txt="About" link="/about" />
             <NavWoodButtons txt="Play Game" link="/game" />
+            <SignOutButton />
         </div>
     </div>
 </template>
 
 
 <style>
+
+.logoutButton {
+    orientation: landscape;
+}
 
 .menu {
     min-width:  576px;
@@ -46,6 +53,5 @@ export default{
     border-color: #e3d09a;
     max-height: 50px;
 }
-
 
 </style>

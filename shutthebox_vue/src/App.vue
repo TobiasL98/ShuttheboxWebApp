@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-  <MyNavbar/>
+  <MyNavbar v-show="showNavBar"/>
   <RouterView/>
   <div class="footer col-12">
       <div class="row">
@@ -14,14 +14,19 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import MyNavbar from './components/MyNavbar.vue';
 import { RouterView } from 'vue-router';
+
 export default {
   name: 'App',
   components: {
     MyNavbar,
     RouterView
+  },
+  data() {
+    return {
+      showNavBar: true,
+    }
   },
   created() {
 
