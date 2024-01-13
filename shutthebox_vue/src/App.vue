@@ -24,6 +24,9 @@ export default {
     RouterView
   },
   created() {
+
+    document.title = 'Shut the Box';
+
     if (this.$workbox) {
       this.$workbox.addEventListener("waiting", () => {
         this.showUpgradeUI = true;
