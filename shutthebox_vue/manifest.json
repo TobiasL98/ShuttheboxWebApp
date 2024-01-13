@@ -1,0 +1,8 @@
+{
+    "name": "Shut the Box",
+    "short_name": "STB",
+    "start_url": "index.html",
+    "display": "standalone",
+    "theme_color": "#0476F2",
+    "background_color": "#fff"
+  }
