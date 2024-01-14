@@ -1,4 +1,16 @@
+<script>
+import MyNavbar from '../components/MyNavbar.vue';
+
+export default {
+  components: {
+    MyNavbar
+  },
+}
+</script>
+
+
 <template>
+    <MyNavbar/>
     <div style="text-align: center" class="explain">
     <p>Welcome to Shutthebox!</p>
     <p>How to play:</p>

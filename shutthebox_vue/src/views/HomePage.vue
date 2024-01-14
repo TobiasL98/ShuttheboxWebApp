@@ -1,4 +1,15 @@
+<script>
+import MyNavbar from "../components/MyNavbar.vue";
+export default{
+    components: {
+        MyNavbar
+    }
+}
+
+</script>
+
 <template>
+    <MyNavbar/>
     <div class="home">
         <h1 class="col-12">Willkommen zu Shut the Box!</h1>
         <h2 class="col-12"> Was ist Shut the Box?</h2>
