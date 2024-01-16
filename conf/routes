@@ -8,13 +8,15 @@
 
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-GET     /                               controllers.HomeController.start()
-
-GET     /explain                        controllers.HomeController.explain()
+GET     /                           controllers.HomeController.start()
+GET     /explain                    controllers.HomeController.explain()
 
 GET     /game                       controllers.HomeController.startGame()
-GET     /game/new                   controllers.HomeController.newGame()
+# GET     /game/new                   controllers.HomeController.newGame()
 GET     /game/:input                controllers.HomeController.doAMove(input)
+GET     /gameMock                   controllers.HomeController.startMockGame()
 
 GET     /style/:input               controllers.HomeController.changeStyle(input)
+GET     /api/raw/:input             controllers.HomeController.rawGameData(input)
+GET     /websocket                  controllers.HomeController.socket()
 

@@ -1,94 +1,216 @@
+@xs: 576px;
+@sm: 576px;
+@md: 768px;
+@lg: 992px;
+@xl: 1200px;
 .classic {
+    a {
+        color: black;
+    }
+    height:auto;
+    margin: 5px;
+    margin-bottom: 500px;
+    padding-top: 5px;
+    background-image:url("/assets/images/wood_button.png");
+             background-repeat: repeat;
     .menu {
-        display: none;
+        @media (min-width: @sm) and (max-width: @md) {
+            max-height: 100px;
+        }
+        .row {
+            @media (max-width: @md){
+                margin-bottom: 10px;
+            }
+            @media (min-width: @md){
+                margin-right: 10px;
+                height: 100%;
+                padding: 5px;
+            }
+            background-color: rgba(168, 125, 50, 0.7);
+            border: 2px;
+            border-radius: 25px;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            .btn {
+                background-color: #e3d09a;
+                border-style: ridge;
+                border-width: thick;
+                border-color: #e3d09a;
+                max-height: 50px;
+            }
+        }
     }
     .content {
+        color: black;
+        background-image:url("/assets/images/filz_green.png");
+        background-repeat: repeat;
+        height: auto;
         .game {
-            .player {
-                .button();
-                border-style: dotted;
-                display: block;
-                width: auto;
-                font-size: larger;
-                margin-top: 20px;
-                margin-bottom: 50px;
-            }
-            .clap {
-                p {
-                    display: none;
+            border-style: ridge;
+            border-width: thick;
+            border-color: #e9d3b2;
+            padding: 2%;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            .game_display {
+                .player {
+                    .game_button();
+                    width: 100%;
+                    margin: 2%;
+                    text-align: center;
+                    vertical-align: middle;
                 }
-                a {
-                    font-size: larger;
+                .clap {
                 }
-                .stone-not-shut {
-                     border-style: ridge;
-                     border-width: thick;
-                     border-color: #BA8C63;
-                     padding: 20px;
-                     margin-top: 20px;
-                     margin-bottom: 20px;
-                     background-image:url("http://localhost:9000/assets/images/retina_wood.png");
-                     background-repeat: repeat;
+                    .stone-not-shut {
+                        .clap_button();
+                    }
+                    .stone-shut {
+                        .clap_button();
+                        background-image:url("/assets/images/retina_wood_dark.png");
+                        background-repeat: repeat;
+                    }
+
+                    .dice {
+                        .game_button();
+                        width: 100%;
+                        margin: 2%;
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+            }
+            .game_buttons {
+                padding: 5%;
+                padding-top: 0px;
+                width: 80%;
+                .button_dice {
+                    .game_button();
                 }
-                .stone-shut {
-                    .stone-not-shut();
-                    background-image:url("http://localhost:9000/assets/images/retina_wood_dark.png");
-                    background-repeat: repeat;
+                .button_undo {
+                    .game_button();
                 }
-            }
-            .dice {
-                .button();
-                border-style: dotted;
-                display: block;
-                width: auto;
-                font-size: larger;
-                margin-top: 50px;
-                margin-bottom: 50px;
-            }
-            .button_dice {
-                .button();
-            }
-            .button_undo {
-                .button();
-            }
-            .button_redo {
-                .button();
-            }
-            .button_nextPlayer {
-                .button();
+                .button_redo {
+                    .game_button();
+                }
+                .button_nextPlayer {
+                    .game_button();
+                }
+                .button_newGame {
+                    .game_button();
+                }
+                .decoration {
+                }
             }
         }
     }
     .footer {
-       display: flex;
-       align-items:center;
-       justify-content: center;
-       a {
-        .button();
-        width: auto;
-       }
+        flex: 1 1 auto;
     }
-    a {
-      text-decoration: none;
-      color: black;
+    .spacer {
+    background-image:url("/assets/images/wood_button.png");
+    background-repeat: repeat;
+    min-height: 500px;
     }
-    .button {
-        display: inline-block;
-        text-align: center;
+    .clap_button {
+            display: inline-block;
+            text-align: center;
+            width: 100px;
+            border-style: ridge;
+            border-width: thick;
+            border-color: #BA8C63;
+            padding: 10px;
+            background-color: #BA8C63;
+            background-image:url("/assets/images/wood_button.png");
+            background-repeat: repeat;
+        }
+    .game_button {
+            display: inline-block;
+            text-align: center;
+            width: 100px;
+            border-style: ridge;
+            border-width: thick;
+            border-color: #e9d3b2;
+            background-color: #e9d3b2;
+            padding: 10px;
+            background-image:url("/assets/images/retina_wood.png");
+            background-color: white;
+            background-repeat: repeat;
+    }
+    a:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+}
+.dev {
+    margin: 20px;
+    margin-top: 10px;
+    background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+        background-color:#282828;
+        background-size:16px 16px;
+    .button_proto {
         width: 100px;
         border-style: ridge;
         border-width: thick;
-        border-color: #BA8C63;
+        border-color: black;
         padding: 10px;
-        background-image:url("http://localhost:9000/assets/images/wood_button.png");
-        background-repeat: repeat;
-        margin-bottom: 40px;
     }
-    font-size: large;
-    display: visible;
-    background-color: gray;
-    background-image:url("http://localhost:9000/assets/images/filz_green.png");
-    background-repeat: repeat;
+    .menu {
+        background-color: red;
+    }
+    .content {
+        background-color: #17a2b8;
+        color: black;
+        .game {
+            .game_display {
+                background-color: black;
+                .player {
+                    background-color: darkgreen;
+                }
+                .clap {
+                    background-color: green;
+                                }
+                    .stone-not-shut {
+                        .button_proto();
+                                }
+                    .stone-shut {
+                        .button_proto();
+                                }
+
+                    .dice {
+                        background-color: lightgreen;
+                    }
+            }
+            .game_buttons {
+            background-color: gray;
+                .button_dice {
+                    .button_proto();
+                }
+                .button_undo {
+                    .button_proto();
+                }
+                .button_redo {
+                    .button_proto();
+                }
+                .button_nextPlayer {
+                    .button_proto();
+                }
+                .button_newGame {
+                    .button_proto();
+                }
+                .decoration {
+                    background-color: green;
+                }
+            }
+        }
+    }
+    .footer {
+        background-color: yellow;
+    }
 }
 
 .felt{
@@ -272,25 +394,7 @@
             }
             .game_buttons{
                 background-color: @black;
-                position: absolute;
-                margin: 0;
-                margin-top: 0%;
-                padding-top: 2%;
-                right: 0%;
-                top: 0%;
-                bottom: 0%;
-                height: 100%;
-                width: 15%;
 
-                div{
-                    height: 25%;
-                    width: 100%;
-                }
-                a{
-                    height: 100%;
-                    width: 100%;
-                    padding: 8%;
-                }
                 a:hover{
                     background-color: @gray;
                 }

@@ -1,55 +1,35 @@
 @(style: String, player: String, dice: String, sum: Int, board: List[Boolean])
 @main("Game", s"$style"){
-<div class="game" style="text-align: center">
+<body>
+<div class="game row" id="app" style="text-align: center ">
 
-  <div class="game_display">
+  <div class="game_display col-12">
   
-    <div class="player">
-      <p>@player</p>
+    <div class="player row" :id="players"> {{players}}</div>
+    <div class="clap row">
+      <template v-for="clap in claps">
+        <a v-if="clap.isClosed" class="clap_button col-4 col-sm" > # </a>
+        <a v-else v-on:click="closeClap(clap.number)" class="clap_button col-4 col-sm"> {{ clap.number }} </a>
+      </template>
     </div>
-    <div class="clap">
-      @for(index <- 0 until board.size){
-      @if(board(index)){
-      <a href="http://localhost:9000/game/@{index + 1}" class="stone-shut"> # </a>
-      }
-      @if(!board(index)){
-      <a href="http://localhost:9000/game/@{index + 1}" class="stone-not-shut"> @{index + 1} </a>
-      }
-      }
-      <p class="dclap">
-        @for(index <- 0 until board.size){
-        @if(board(index)){
-        @{index + 1}
-        }
-        @if(!board(index)){
-        #
-        }
-        }
-      </p>
-    </div>
-    <div class="dice">
-      <p>Gewürfelt: @dice | Summe: @sum</p>
-    </div>
+    <div class="dice row" id="dice-output">Gewürfelt: {{dice}} | Summe: {{diceSum}}</div>
   </div>
 
-  <div class="game_buttons">
-
-
-  <div class="button_dice">
-      <a href="http://localhost:9000/game/w">Würfeln </a>
-  </div>
-  <div class="button_undo">
-      <a href="http://localhost:9000/game/y">Undo </a>
-  </div>
-  <div class="button_redo">
-      <a href="http://localhost:9000/game/z">Redo </a>
-  </div>
-  <div class="button_nextPlayer">
-      <a href="http://localhost:9000/game/next">next Player</a>
-  </div>
+  <div class="game_buttons col-12">
+    <div class="row">
+      <div class="decoration d-xs-none col-sm-1"></div>
+      <a class="button_dice col-12 col-sm-2" :id="dice" v-on:click="throwDice()">throw the dice </a>
+      <a class="button_undo col-12 col-sm-2" :id="undo" v-on:click="undo()">Undo </a>
+      <a class="button_redo col-12 col-sm-2" :id="redo" v-on:click="redo()">Redo </a>
+      <a class="button_nextPlayer col-12 col-sm-2" v-on:click="nextPlayer()">next Player</a>
+      <a class="button_newGame col-12 col-sm-2" v-on:click="newGame()"> Neues Spiel starten </a>
+      <div class="decoration d-xs-none col-sm-1"></div>
+    </div>
+    
+    <div :id="numOfMoves">
+      {{ numOfMoves }}
+    </div>
 </div>
-<!--  </p>-->
-<!--</center>-->
-<!--  <img src="@routes.Assets.versioned("images/shutthebox.png")" width="auto" height="300>-->
-</div>
+</body>
+
 }

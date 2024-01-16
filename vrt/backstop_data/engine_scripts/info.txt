@@ -1,0 +1,4 @@
+Wenn skriptausführung blockiert:
+
+Get-ExecutionPolicy -List
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
