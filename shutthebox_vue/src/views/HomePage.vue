@@ -1,8 +1,10 @@
 <script>
 import MyNavbar from "../components/MyNavbar.vue";
+import SignOutButton from "../components/SignOutButton.vue";
 export default{
     components: {
-        MyNavbar
+        MyNavbar,
+        SignOutButton
     }
 }
 
@@ -31,6 +33,7 @@ export default{
             Es werden so viele Runden gespielt, bis alle Spieler außer einem einen Penalty score von 45 oder mehr Punkten erreicht haben (45 ist die Summe aller Klappen, denn 1 + 2 + ... + 9 = 45).
             Die Minuspunkte werden dabei laufend addiert, sodass die einzelnen Spieler nacheinander ausscheiden und der letzte Überlebende gewinnt.
         </p>
+        <SignOutButton />
         <p class="col-12">
             <a href="https://de.wikipedia.org/wiki/Shut_the_Box">Quelle: Wikipedia</a>
         </p>

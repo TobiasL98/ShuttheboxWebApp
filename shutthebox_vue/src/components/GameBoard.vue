@@ -3,6 +3,7 @@ import $ from 'jquery';
 import DiceDisplay from '@/components/DiceDisplay.vue'
 import WoodButtons from '@/components/WoodButtons.vue'
 import WoodDisplay from '@/components/WoodDisplay.vue'
+import SignOutButton from '@/components/SignOutButton.vue';
 let id = 1;
 
 export default{
@@ -10,6 +11,7 @@ export default{
         DiceDisplay,
         WoodButtons,
         WoodDisplay,
+        SignOutButton
     },
     data(){
         return{
@@ -162,10 +164,16 @@ export default{
             <WoodButtons txt="Next Player" v-on:click="nextPlayer()"/>
             <WoodButtons txt="New Game" v-on:click="newGame()"/>
         </div>
+        <div class="signOut">
+            <SignOutButton/>
+        </div>
     </div>
 </template>
 
 <style>
+ .signOut {
+    padding-top: 30px;   
+ }
  .gameBoard {
     color: black;
     background-image:url("/src/assets/filz_green.png");

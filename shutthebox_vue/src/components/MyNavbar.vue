@@ -1,11 +1,9 @@
 <script>
 import NavWoodButtons from './NavWoodButtons.vue';
-import SignOutButton from './SignOutButton.vue';
 export default{
     name: "MyNavbar",
     components:{
         NavWoodButtons,
-        SignOutButton
     }
 
 }
@@ -17,7 +15,6 @@ export default{
             <NavWoodButtons txt="Home" link="/home" />
             <NavWoodButtons txt="About" link="/about" />
             <NavWoodButtons txt="Play Game" link="/game" />
-            <SignOutButton />
         </div>
     </div>
 </template>
